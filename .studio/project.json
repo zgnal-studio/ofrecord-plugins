@@ -1,0 +1,14 @@
+{
+  "standard_version": "1.0",
+  "profiles": ["skill"],
+  "documents": {
+    "brief": ["README.md", "plugin/README.md"],
+    "scope": ["plugin/skills/executive-search/SKILL.md#Boundaries"],
+    "runbook": ["README.md#Install", "plugin/README.md#Getting started"],
+    "skill": ["plugin/skills/executive-search/SKILL.md"],
+    "delivery": ["plugin/README.md#What is in this plugin"],
+    "security": ["plugin/README.md#What is sent, and where"],
+    "compatibility": ["plugin/README.md#Getting started"]
+  },
+  "not_applicable": {}
+}
