@@ -6,8 +6,8 @@ This repository holds only the plugin (version 0.2.0): a skill and the connector
 
 ## Install
 
-- **Claude Code:** `/plugin marketplace add Tarn-Labs-VStudio/ofrecord-plugins`, then `/plugin install ofrecord@ofrecord`.
-- **Codex:** `codex plugin marketplace add https://github.com/Tarn-Labs-VStudio/ofrecord-plugins`, then `codex plugin add ofrecord@ofrecord`. Restart the Codex app afterwards.
+- **Claude Code:** `/plugin marketplace add zgnal-studio/ofrecord-plugins`, then `/plugin install ofrecord@ofrecord`.
+- **Codex:** `codex plugin marketplace add https://github.com/zgnal-studio/ofrecord-plugins`, then `codex plugin add ofrecord@ofrecord`. Restart the Codex app afterwards.
 - **Claude (web, desktop, mobile), ChatGPT and other assistants:** add the connector URL above as a custom connector with OAuth. See [plugin/README.md](plugin/README.md).
 
 Of Record is in a founders-only preview: sign-in is open to invited addresses only.

@@ -1,0 +1,31 @@
+name: Studio documentation advisory
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: studio-advisory-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  documentation-advisory:
+    name: Documentation gaps (advisory only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - name: Report documentation gaps without blocking merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          # Fetch trusted base-branch code only. Never checkout or execute PR code.
+          gh api -H 'Accept: application/vnd.github.raw+json' \
+            "repos/${GITHUB_REPOSITORY}/contents/.github/scripts/studio_advisor.py?ref=${BASE_SHA}" \
+            > "${RUNNER_TEMP}/studio_advisor.py"
+          python3 "${RUNNER_TEMP}/studio_advisor.py"

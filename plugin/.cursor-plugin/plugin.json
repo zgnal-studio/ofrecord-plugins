@@ -8,7 +8,7 @@
     "email": "vstudio@tarn-labs.com"
   },
   "homepage": "https://ofrecord.vercel.app",
-  "repository": "https://github.com/Tarn-Labs-VStudio/ofrecord",
+  "repository": "https://github.com/zgnal-studio/ofrecord",
   "keywords": ["recruiting", "executive-search", "talent", "research", "shortlist"],
   "skills": "skills",
   "mcpServers": "./mcp.cursor.json"
